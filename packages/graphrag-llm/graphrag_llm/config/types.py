@@ -12,6 +12,7 @@ class LLMProviderType(StrEnum):
 
     LiteLLM = "litellm"
     MockLLM = "mock"
+    TransformersLLM = "transformers"
 
 
 class AuthMethod(StrEnum):

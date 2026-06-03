@@ -101,6 +101,16 @@ def create_embedding(
                     embedding_type=LLMProviderType.MockLLM,
                     embedding_initializer=MockLLMEmbedding,
                 )
+            case LLMProviderType.TransformersLLM:
+                from graphrag_llm.embedding.transformers_llm_embedding import (
+                    TransformersLLMEmbedding,
+                )
+
+                register_embedding(
+                    embedding_type=LLMProviderType.TransformersLLM,
+                    embedding_initializer=TransformersLLMEmbedding,
+                    scope="singleton",
+                )
             case _:
                 msg = f"ModelConfig.type '{strategy}' is not registered in the CompletionFactory. Registered strategies: {', '.join(embedding_factory.keys())}"
                 raise ValueError(msg)

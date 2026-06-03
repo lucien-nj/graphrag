@@ -74,3 +74,25 @@ Any use of third-party trademarks or logos are subject to those third-party's po
 ## Privacy
 
 [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement)
+
+## Modification History 
+
+- **2026-06-03**: Initial release of GraphRAG.
+- **2026-06-03**: Added support for local embedding models using the transformers framework.
+This update adds the functionality to load local embedding models using the transformers framework. The new file added is packages\graphrag-llm\graphrag_llm\embedding\transformers_llm_embedding.py. The content of packages\graphrag-llm\graphrag_llm\embedding\embedding_factory.py has been modified to register embedding models of the transformers type. Additionally, the content of packages\graphrag-llm\graphrag_llm\config\types.py has been updated to include the transformers enumeration type.
+
+###
+Settings.yaml configuration has been updated to include the transformers type for embedding models. The new configuration is as follows:
+
+```yaml
+embedding_models:
+  default_embedding_model:
+    type: transformers
+    model: embedding model path #e.g. X:\AIModels\huggingface\hub\models--BAAI--bge-m3\snapshots\5617a9f61b028005a4858fdac845db406aefb181
+    device: cpu
+    normalize_embeddings: true
+    model_provider: local
+    call_args:
+      encoding_format: float
+```
+
