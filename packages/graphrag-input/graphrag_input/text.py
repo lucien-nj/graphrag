@@ -18,7 +18,7 @@ class TextFileReader(InputReader):
 
     def __init__(self, file_pattern: str | None = None, **kwargs):
         super().__init__(
-            file_pattern=file_pattern if file_pattern is not None else ".*\\.txt$",
+            file_pattern=file_pattern if file_pattern is not None else ".*\\.(txt|md)$",
             **kwargs,
         )
 
