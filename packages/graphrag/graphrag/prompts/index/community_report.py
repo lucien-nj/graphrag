@@ -10,6 +10,8 @@ Write a comprehensive report of a community, given a list of entities that belon
 
 # Report Structure
 
+The entire report MUST be written in Chinese (中文), including the title, summary, rating explanation, and all findings.
+
 The report should include the following sections:
 
 - TITLE: community's name that represents its key entities - title should be short but specific. When possible, include representative named entities in the title.

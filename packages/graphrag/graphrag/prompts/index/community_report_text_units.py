@@ -14,6 +14,9 @@ The content of this report includes an overview of the community's key entities,
 Retain as much time specific information as possible so your end user can build a timeline of events.
 
 # Report Structure
+
+The entire report MUST be written in Chinese (中文), including the title, summary, rating explanation, and all findings.
+
 The report should include the following sections:
 - TITLE: community's name that represents its key entities - title should be short but specific. When possible, include representative named entities in the title. Avoid including phrases like 'eligibility assessment' or 'eligibility assessment report' in the title.
 - SUMMARY: An executive summary of the community's overall structure, how its entities are related to each other, and significant program-specific or eligibility-related insights.

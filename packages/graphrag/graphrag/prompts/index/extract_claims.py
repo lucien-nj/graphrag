@@ -24,7 +24,7 @@ For each claim, extract the following information:
 
 Format each claim as (<subject_entity><|><object_entity><|><claim_type><|><claim_status><|><claim_start_date><|><claim_end_date><|><claim_description><|><claim_source>)
 
-3. Return output in English as a single list of all the claims identified in steps 1 and 2. Use **##** as the list delimiter.
+3. Return output in Chinese (中文) as a single list of all the claims identified in steps 1 and 2. Use **##** as the list delimiter.
 
 4. When finished, output <|COMPLETE|>
 

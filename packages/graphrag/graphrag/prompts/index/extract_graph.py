@@ -22,7 +22,7 @@ For each pair of related entities, extract the following information:
 - relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
  Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
  
-3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+3. Return output in Chinese (中文) as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
  
 4. When finished, output <|COMPLETE|>
  
