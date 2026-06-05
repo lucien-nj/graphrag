@@ -1,0 +1,3 @@
+[submodule "graphrag-visualizer"]
+	path = graphrag-visualizer
+	url = https://github.com/lucien-nj/graphrag-visualizer.git
