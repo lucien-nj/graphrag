@@ -54,8 +54,9 @@ Use the following input for your answer.
 Entity specification: {entity_specs}
 Claim description: {claim_description}
 Text: {input_text}
+IMPORTANT: All outputs MUST be in Chinese (中文). Claims, descriptions, and entity names should all be written in Chinese.
 Output:"""
 
 
-CONTINUE_PROMPT = "MANY entities were missed in the last extraction.  Add them below using the same format:\n"
+CONTINUE_PROMPT = "MANY entities were missed in the last extraction. Add them below using the same format:\n"
 LOOP_PROMPT = "It appears some entities may have still been missed. Answer Y if there are still entities that need to be added, or N if there are none. Please answer with a single letter Y or N.\n"

@@ -150,4 +150,6 @@ Do not include information where the supporting evidence for it is not provided.
 
 Limit the total report length to {max_report_length} words.
 
+IMPORTANT: All outputs MUST be in Chinese (中文). The report title, summary, rating explanation, and all findings should be written in Chinese.
+
 Output:"""

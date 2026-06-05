@@ -123,6 +123,7 @@ Output:
 Entity_types: {entity_types}
 Text: {input_text}
 ######################
+IMPORTANT: All outputs MUST be in Chinese (中文). Entity names, descriptions, and relationships should all be written in Chinese.
 Output:"""
 
 CONTINUE_PROMPT = "MANY entities and relationships were missed in the last extraction. Remember to ONLY emit entities that match any of the previously extracted types. Add them below using the same format:\n"

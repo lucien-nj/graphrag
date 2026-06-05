@@ -16,5 +16,6 @@ Limit the final description length to {max_length} words.
 Entities: {entity_name}
 Description List: {description_list}
 #######
+IMPORTANT: All outputs MUST be in Chinese (中文). The summary should be written in Chinese.
 Output:
 """

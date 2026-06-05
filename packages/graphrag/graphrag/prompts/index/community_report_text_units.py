@@ -91,5 +91,7 @@ Use the following text for your answer. Do not make anything up in your answer.
 Text:
 {input_text}
 
+IMPORTANT: All outputs MUST be in Chinese (中文). The report title, summary, rating explanation, and all findings should be written in Chinese.
+
 Output:
 """
