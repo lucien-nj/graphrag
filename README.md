@@ -75,7 +75,10 @@ Any use of third-party trademarks or logos are subject to those third-party's po
 
 [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement)
 
-## Modification History 
+## Modification History
+
+- **2026-06-05**: Integrated GraphRAG API server as an optional install module (`graphrag[server]`).
+  This update embeds the FastAPI-based REST server from [graphrag-api](https://github.com/noworneverev/graphrag-api) into the main `graphrag` package. It exposes global, local, drift, and basic search endpoints via HTTP, and can be started with either `graphrag server` or `uv run poe server`. The new files added are `packages\graphrag\graphrag\api_server\` (FastAPI app, config, and serialization utilities) and `packages\graphrag\graphrag\cli\server.py` (CLI command implementation). The content of `packages\graphrag\graphrag\cli\main.py` has been modified to register the `server` subcommand. `packages\graphrag\pyproject.toml` has been updated to include the `[project.optional-dependencies] server` group (`fastapi>=0.112`, `uvicorn>=0.30`). The root `pyproject.toml` has been updated with a new `[dependency-groups] server` entry and a `server` task under `[tool.poe.tasks]`.
 
 - **2026-06-03**: Initial release of GraphRAG.
 - **2026-06-03**: Added support for local embedding models using the transformers framework.

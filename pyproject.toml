@@ -46,6 +46,9 @@ dev = [
     "update-toml~=0.2",
     "pytest-xdist[psutil]~=3.8.0",
 ]
+server = [
+    "graphrag[server]",
+]
 
 [tool.uv]
 package = false
@@ -54,6 +57,7 @@ package = false
 members = ["packages/*"]
 
 [tool.uv.sources]
+graphrag = { workspace = true }
 graphrag-chunking = { workspace = true }
 graphrag-common = { workspace = true }
 graphrag-input = { workspace = true }
@@ -99,6 +103,7 @@ update = "python -m graphrag update"
 init = "python -m graphrag init"
 query = "python -m graphrag query"
 prompt_tune = "python -m graphrag prompt-tune"
+server = "python -m graphrag server"
 # Pass in a test pattern
 test_only = "pytest -s -k"
 serve_docs = "mkdocs serve"

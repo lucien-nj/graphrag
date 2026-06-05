@@ -59,6 +59,12 @@ dependencies = [
     "typer~=0.16",
 ]
 
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.112",
+    "uvicorn>=0.30",
+]
+
 [project.scripts]
 graphrag = "graphrag.cli.main:app"
 

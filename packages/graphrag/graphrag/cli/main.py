@@ -479,3 +479,64 @@ def _query_cli(
             )
         case _:
             raise ValueError(INVALID_METHOD_ERROR)
+
+
+@app.command("server")
+def _server_cli(
+    root: Path = typer.Option(
+        Path.cwd(),
+        "--root",
+        "-r",
+        help="The project root directory.",
+        exists=True,
+        dir_okay=True,
+        file_okay=False,
+        writable=True,
+        resolve_path=True,
+        autocompletion=ROOT_AUTOCOMPLETE,
+    ),
+    host: str = typer.Option(
+        "0.0.0.0",
+        "--host",
+        "-h",
+        help="The host to bind the server to.",
+    ),
+    port: int = typer.Option(
+        8000,
+        "--port",
+        "-p",
+        help="The port to bind the server to.",
+    ),
+    community_level: int = typer.Option(
+        2,
+        "--community-level",
+        help="Leiden hierarchy level from which to load community reports.",
+    ),
+    response_type: str = typer.Option(
+        "Single Paragraph",
+        "--response-type",
+        help="Free-form description of the desired response format.",
+    ),
+    data: Path | None = typer.Option(
+        None,
+        "--data",
+        "-d",
+        help="Index output directory (contains the parquet files).",
+        exists=True,
+        dir_okay=True,
+        readable=True,
+        resolve_path=True,
+        autocompletion=ROOT_AUTOCOMPLETE,
+    ),
+) -> None:
+    """Start the GraphRAG API server."""
+    from graphrag.cli.server import server_cli
+
+    server_cli(
+        root=root,
+        host=host,
+        port=port,
+        community_level=community_level,
+        response_type=response_type,
+        data=data,
+    )
